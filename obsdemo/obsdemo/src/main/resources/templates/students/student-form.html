@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Kaydet</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Ogrenci Bilgi Sistemi</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Kaydet</p>
+	
+		<form action="#" th:action="@{/students/save}"
+						 th:object="${student}" method="POST">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="text" th:field="*{no}" />
+			
+			<input type="text" th:field="*{studentName}"
+					class="form-control mb-4 col-4" placeholder="Isim">
+
+			
+			
+				
+			<button type="submit" class="btn btn-info col-2">Kaydet</button>
+						
+		</form>
+		
+	
+		<hr>
+		<a th:href="@{/students/list}">Geri Don</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
